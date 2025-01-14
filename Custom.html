@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/customorder.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Orders | Sweet Crumbs Bakery</title>
+</head>
+<body>
+    <header>
+        <h1>🎂 Custom Orders at Sweet Crumbs Bakery 🧁</h1>
+				 <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cakebycam.html">Cakes</a></li>
+                <li><a href="Milkshakes.html">Milkshakes</a></li>
+                <li><a href="Minitreats.html">Minitreats</a></li>
+				<li><a href="pies.html">Pies</a></li>
+                <li><a href="PolishDessert.html">Polish Desserts</a></li>
+                <li><a href="Custom.html">Custom Orders</a></li>
+            </ul>
+        </nav>
+        <p>Create Your Dream Dessert!</p>
+    </header>
+
+    <section class="custom-order-section">
+        <h2>Cake Types</h2>
+        <div class="cake-options">
+            <div class="cake-type">
+                <h3>Classic Layer Cake</h3>
+                <p>2-6 layers of your favorite flavors</p>
+                <p>Starting at $45</p>
+            </div>
+            <div class="cake-type">
+                <h3>Cupcake Tower</h3>
+                <p>24-48 custom decorated cupcakes</p>
+                <p>Starting at $65</p>
+            </div>
+            <div class="cake-type">
+                <h3>Special Occasion Cake</h3>
+                <p>Intricate designs for weddings & events</p>
+                <p>Starting at $125</p>
+            </div>
+        </div>
+    </section>
+
+    <form id="custom-order-form">
+        <h2>Place Your Custom Order</h2>
+        
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="event-type">Event Type:</label>
+        <select id="event-type" name="event-type">
+            <option value="">Select Event Type</option>
+            <option value="birthday">Birthday</option>
+            <option value="wedding">Wedding</option>
+            <option value="graduation">Graduation</option>
+            <option value="corporate">Corporate Event</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="cake-type">Cake Type:</label>
+        <select id="cake-type" name="cake-type" required>
+            <option value="">Select Cake Type</option>
+            <option value="layer-cake">Classic Layer Cake</option>
+            <option value="cupcake-tower">Cupcake Tower</option>
+            <option value="special-occasion">Special Occasion Cake</option>
+        </select>
+
+        <label for="flavors">Cake Flavors:</label>
+        <textarea id="flavors" name="flavors" placeholder="Describe your desired cake flavors (e.g., chocolate with vanilla buttercream)"></textarea>
+
+        <label for="design-details">Design Details:</label>
+        <textarea id="design-details" name="design-details" placeholder="Describe any specific design elements, colors, or themes"></textarea>
+
+        <label for="servings">Estimated Number of Servings:</label>
+        <input type="number" id="servings" name="servings" min="1" max="200">
+
+        <label for="event-date">Desired Event Date:</label>
+        <input type="date" id="event-date" name="event-date" required>
+
+        <label for="additional-notes">Additional Notes:</label>
+        <textarea id="additional-notes" name="additional-notes" placeholder="Any other information we should know?"></textarea>
+
+        <button type="submit" class="submit-btn">Request Custom Quote</button>
+    </form>
+
+    <script>
+        document.getElementById('custom-order-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your custom order request! Our bakery team will review your details and contact you within 1-2 business days to discuss your dream dessert.');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Crumbs Bakery</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="icon" type="image/x-icon" href="/bread-favicon.ico">
+    <meta name="description" content="Artisan bakery offering fresh bread, pastries, and custom cakes">
+</head>
+<body>
+    <header>
+        <h1>🥖 Sweet Crumbs Bakery 🥐</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cakebycam.html">Cakes</a></li>
+                <li><a href="Milkshakes.html">Milkshakes</a></li>
+                <li><a href="Minitreats.html">Minitreats</a></li>
+				<li><a href="pies.html">Pies</a></li>
+                <li><a href="PolishDessert.html">Polish Desserts</a></li>
+                <li><a href="Custom.html">Custom Orders</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to Sweet Crumbs Bakery</h2>
+            <p>Crafting delicious artisan breads and pastries fresh daily. Every bite tells a story of passion and tradition!</p>
+        </section>
+
+        <section id="menu">
+            <h2>Our Delectable Menu</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="images/bread.jpg" alt="Bread" style="width:100%; height:35%;">
+                    <h3>Sourdough Bread</h3>
+                    <p>Our signature slow-fermented sourdough</p>
+                    <p>$6.50 per loaf</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/choccroissants.jpg" alt="Chocolate Croissants" style="width:100%; height:35%;">
+                    <h3>Chocolate Croissants</h3>
+                    <p>Buttery layers with rich chocolate</p>
+                    <p>$3.75 each</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/baguette.jpg" alt="Classic Baguette" style="width:100%; height:35%;">
+                    <h3>Classic Baguette</h3>
+                    <p>Crispy crust, soft interior</p>
+                    <p>$4.25 each</p>
+                </div>
+            </div>
+        </section>
+
+        <form id="custom-order-form">
+            <h2>Create Your Custom Bread Order</h2>
+            
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone">
+    
+            <label for="base-bread">Select Your Bread:</label>
+            <select id="base-bread" name="base-bread" required>
+                <option value="">Choose Your Bread</option>
+                <option value="sourdough">Sourdough Bread</option>
+                <option value="chocolate-croissant">Chocolate Croissants</option>
+                <option value="classic-baguette">Classic Baguette</option>
+            </select>
+    
+            <label for="special-instructions">Special Instructions:</label>
+            <textarea id="special-instructions" name="special-instructions" placeholder="Any special requests or dietary requirements?"></textarea>
+    
+            <button type="submit" class="submit-btn">Place Bread Order</button>
+        </form>
+    
+        <script>
+            document.getElementById('custom-order-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your custom bread order! We will prepare your delicious creation soon.');
+            });
+        </script>
+    </main>
+    </main>
+
+    <footer>
+        <p>© 2024 Sweet Crumbs Bakery | 123 Flour Street, Breadtown</p>
+        <p>📞 (555) BREAD-YUM | 📧 orders@sweetcrumbs.com</p>
+    </footer>
+
+    <script>
+        // Simple form validation
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your order request! We\'ll get back to you soon.');
+        });
+    </script>
+</body>
+</html>

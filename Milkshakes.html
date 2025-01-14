@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Crumbs Bakery</title>
+    <link rel="stylesheet" href="css/milkshakes.css">
+    <link rel="icon" type="image/x-icon" href="/bread-favicon.ico">
+    <meta name="description" content="Artisan bakery offering fresh bread, pastries, and custom cakes">
+</head>
+<body>
+    <header>
+        <h1>🥖 Sweet Crumbs Bakery 🥐</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cakebycam.html">Cakes</a></li>
+                <li><a href="Milkshakes.html">Milkshakes</a></li>
+                <li><a href="Minitreats.html">Minitreats</a></li>
+				<li><a href="pies.html">Pies</a></li>
+                <li><a href="PolishDessert.html">Polish Desserts</a></li>
+                <li><a href="Custom.html">Custom Orders</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to Our Sweet Milkshake menu</h2>
+            <p>Crafting delicious fresh Milkshakes Everyday. Every sip is a story of passion and freshness!</p>
+        </section>
+
+        <section id="menu">
+            <h2>Our Delectable Milkshake Menu</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="images/chocolatefudgebliss.jpg" alt="Bread" style="width:100%; height:38%;">
+                    <h3>Chocolate Fudge Bliss</h3>
+                    <p>Rich chocolate ice cream blended with decadent fudge swirls, topped with whipped cream and a drizzle of chocolate sauce.</p>
+                    <p>Price: £7</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/strawberryshortcakedream.jpg" alt="Bread" style="width:100%; height:38%;">
+                    <h3>Strawberry Shortcake Dream</h3>
+                    <p>Sweet strawberry ice cream with chunks of real shortcake, layered with fresh strawberries and whipped cream.</p>
+                    <p>Price: £7</p>
+                </div>
+                <div class="product-card">
+                    <img src="images/vanillabeanclassic.jpg" alt="Bread" style="width:100%; height:38%;">
+                    <h3>Vanilla Bean Classic</h3>
+                    <p>A timeless treat! Creamy vanilla bean ice cream blended to perfection and topped with whipped cream and a cherry.</p>
+                    <p>Price: £7</p>
+                </div>
+            </div>
+        </section>
+
+        <form id="custom-order-form">
+            <h2>Create Your Custom Milkshake</h2>
+            
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone">
+    
+            <label for="base-flavor">Select Your Milkshake:</label>
+            <select id="base-flavor" name="base-flavor" required>
+                <option value="">Choose Your Flavor</option>
+                <option value="chocolate-fudge">Chocolate Fudge Bliss</option>
+                <option value="strawberry-shortcake">Strawberry Shortcake Dream</option>
+                <option value="vanilla-bean">Vanilla Bean Classic</option>
+            </select>
+    
+            <label for="mix-ins">Mix-ins (Select up to 3):</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="oreos" name="mix-ins" value="oreos">
+                <label for="oreos">Oreos</label>
+                
+                <input type="checkbox" id="brownies" name="mix-ins" value="brownies">
+                <label for="brownies">Brownies</label>
+                
+                <input type="checkbox" id="cookies" name="mix-ins" value="cookies">
+                <label for="cookies">Cookie Pieces</label>
+                
+                <input type="checkbox" id="mnms" name="mix-ins" value="mnms">
+                <label for="mnms">M&Ms</label>
+                
+                <input type="checkbox" id="nuts" name="mix-ins" value="nuts">
+                <label for="nuts">Nuts</label>
+            </div>
+    
+            <label for="toppings">Toppings (Select up to 2):</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="whipped-cream" name="toppings" value="whipped-cream">
+                <label for="whipped-cream">Whipped Cream</label>
+                
+                <input type="checkbox" id="sprinkles" name="toppings" value="sprinkles">
+                <label for="sprinkles">Sprinkles</label>
+                
+                <input type="checkbox" id="caramel" name="toppings" value="caramel">
+                <label for="caramel">Caramel Drizzle</label>
+                
+                <input type="checkbox" id="chocolate-sauce" name="toppings" value="chocolate-sauce">
+                <label for="chocolate-sauce">Chocolate Sauce</label>
+            </div>
+    
+            <label for="special-instructions">Special Instructions:</label>
+            <textarea id="special-instructions" name="special-instructions" placeholder="Any special requests or dietary requirements?"></textarea>
+    
+            <button type="submit" class="submit-btn">Place Milkshake Order</button>
+        </form>
+    
+        <script>
+            document.getElementById('custom-order-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your custom milkshake order! We will prepare your delicious creation soon.');
+            });
+    
+            // Limit mix-ins to 3 selections
+            const mixIns = document.querySelectorAll('input[name="mix-ins"]');
+            mixIns.forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    const checked = document.querySelectorAll('input[name="mix-ins"]:checked');
+                    if (checked.length > 3) {
+                        this.checked = false;
+                        alert('You can only select up to 3 mix-ins');
+                    }
+                });
+            });
+    
+            // Limit toppings to 2 selections
+            const toppings = document.querySelectorAll('input[name="toppings"]');
+            toppings.forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    const checked = document.querySelectorAll('input[name="toppings"]:checked');
+                    if (checked.length > 2) {
+                        this.checked = false;
+                        alert('You can only select up to 2 toppings');
+                    }
+                });
+            });
+        </script>
+    </main>
+
+    <footer>
+        <p>© 2024 Sweet Crumbs Bakery | 123 Flour Street, Breadtown</p>
+        <p>📞 (555) BREAD-YUM | 📧 orders@sweetcrumbs.com</p>
+    </footer>
+
+    <script>
+        // Simple form validation
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your order request! We\'ll get back to you soon.');
+        });
+    </script>
+</body>
+</html>

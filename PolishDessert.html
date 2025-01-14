@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polish Desserts Haven</title>
+    <link rel="stylesheet" href="css/polishdessert.css">
+    <link rel="icon" type="image/x-icon" href="/dessert-favicon.ico">
+    <meta name="description" content="Discover traditional Polish desserts and their rich flavors">
+</head>
+<body>
+    <header>
+        <h1>🍰 Polish Desserts Haven 🍩</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cakebycam.html">Cakes</a></li>
+                <li><a href="Milkshakes.html">Milkshakes</a></li>
+                <li><a href="Minitreats.html">Minitreats</a></li>
+				<li><a href="pies.html">Pies</a></li>
+                <li><a href="PolishDessert.html">Polish Desserts</a></li>
+                <li><a href="Custom.html">Custom Orders</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to Polish Desserts Haven</h2>
+            <p>Experience the rich and authentic flavors of traditional Polish desserts. From delicate pastries to hearty cakes, every treat is a journey to Poland's culinary heritage.</p>
+        </section>
+
+        <section id="menu">
+    <h2>Our Traditional Desserts</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="images/kremowka.jpg" alt="Kremówka" style="width:100%; height:40%;">
+            <h3>Kremówka</h3>
+            <p>Delightful Polish cream pie with layers of puff pastry and rich custard</p>
+            <p>Price: £40 per tray</p>
+        </div>
+        <div class="product-card">
+            <img src="images/makowiec.jpg" alt="Makowiec" style="width:100%; height:40%;">
+            <h3>Makowiec</h3>
+            <p>Delicious poppy seed roll with a hint of sweetness</p>
+            <p>Price: £30</p>
+        </div>
+        <div class="product-card">
+            <img src="images/szarlotka.jpg" alt="Szarlotka" style="width:100%; height:40%;">
+            <h3>Szarlotka</h3>
+            <p>Traditional Polish apple pie with cinnamon</p>
+            <p>Price: £35 per tray</p>
+        </div>
+    </div>
+</section>
+
+<form id="custom-order-form">
+    <h2>Create Your Custom Polish Dessert Order</h2>
+    
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone">
+
+    <label for="base-dessert">Select Your Dessert:</label>
+    <select id="base-dessert" name="base-dessert" required>
+        <option value="">Choose Your Dessert</option>
+        <option value="makowiec">Makowiec</option>
+        <option value="kremowka">Kremówka</option>
+        <option value="szarlotka">Szarlotka</option>
+    </select>
+
+    <label for="special-instructions">Special Instructions:</label>
+    <textarea id="special-instructions" name="special-instructions" placeholder="Any special requests or dietary requirements?"></textarea>
+
+    <button type="submit" class="submit-btn">Place Dessert Order</button>
+</form>
+
+<script>
+    document.getElementById('custom-order-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you for your custom Polish dessert order! We will prepare your delicious creation soon.');
+    });
+</script>
+
+    </main>
+
+    <footer>
+        <p>© 2024 Polish Desserts Haven | 456 Sweet Lane, Dessertville</p>
+        <p>📞 (555) SWEET-TREAT | 📧 orders@polishdesserts.com</p>
+    </footer>
+
+    <script>
+        // Simple form validation
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your custom order request! We will be in touch soon.');
+        });
+    </script>
+</body>
+</html>
