@@ -98,3 +98,83 @@ form textarea {
 .submit-btn:hover {
     background-color: #f7b83d;
 }
+/* Basket Styles */
+.basket {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: lightblue;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.basket h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+.basket ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 5px 0;
+}
+
+.basket ul li {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.basket p {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+/* Add to Basket Button Styles */
+.cake-options .add-to-basket  {
+    background: lightblue;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+.treat-options .add-to-basket
+{
+    background: lightblue;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.cake-options .add-to-basket:hover {
+    background: deepskyblue;
+    color: white;
+}
+.section {
+    background-color: white;
+    border: 2px solid #e9d5c3;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+.treat-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.treat-item {
+    border: 1px solid #f0e4d4;
+    padding: 15px;
+    text-align: center;
+    background-color: #fffaf0;
